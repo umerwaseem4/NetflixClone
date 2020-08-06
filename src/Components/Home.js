@@ -13,7 +13,9 @@ const Home = () => {
             alt="logo"
             className="home__logo img-fluid"
           />
-          <Link className="home__maincta">Sign in</Link>
+          <Link to="/homescreen" className="home__maincta">
+            Sign in
+          </Link>
         </div>
         <div className="home__headingarea ">
           <h1 className="home__heroHeading">
@@ -27,7 +29,9 @@ const Home = () => {
             Ready to watch? Enter your email to create or restart your
             membership.
           </p>
-          <Link className="main__ctasec ">Show More Results</Link>
+          <Link to="/homescreen" className="main__ctasec">
+            Show More Results
+          </Link>
         </div>
       </div>
       <ReuseableComponent
