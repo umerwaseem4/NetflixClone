@@ -5,6 +5,7 @@
 @import "./styles/Row";
 @import "./styles/spinner.scss";
 @import "./styles/Banner";
+@import "./styles/Navbar";
 
 * {
   box-sizing: border-box;
@@ -88,11 +89,12 @@
     order: 2;
   }
   .section_a .container p {
-    font-size: 15px;
+    font-size: 10px;
+    // margin: 30px 0;
   }
   .section_a .container h1 {
     font-size: 30px;
-    padding-top: 10px;
+    padding-top: 1px;
     font-weight: normal;
   }
   .section_a .container video {

@@ -10,6 +10,9 @@
   .row__posters::-webkit-scrollbar {
     display: none;
   }
+  .row__titele {
+    font-size: 1.3rem;
+  }
   &__poster {
     object-fit: contain;
     width: 100%;

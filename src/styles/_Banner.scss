@@ -1,10 +1,11 @@
 .banner {
   color: #fff;
   object-fit: contain;
-  height: 448px;
+  height: 40rem;
+
   &__content {
     margin-left: 30px;
-    padding-top: 140px;
+    padding-top: 200px;
     height: 190px;
   }
   &__content h1 {
@@ -38,4 +39,39 @@
     background-color: #fff;
     transition: all 0.2s;
   }
+  .banner__date {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1rem 0 0;
+  }
+  .banner__faded {
+    margin-top: 12rem;
+    height: 27.5rem;
+    background-image: linear-gradient(180deg, transparent, rgb(3, 3, 3), #000);
+  }
+  @media (max-width: 724px) {
+    .banner__desc {
+      width: 35rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .banner__desc {
+      width: 27rem;
+    }
+  }
+  @media (max-width: 400px) {
+    .banner__desc {
+      width: 20rem;
+    }
+    .banner__content h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      padding-bottom: 0.3rem;
+    }
+  }
+}
+.banner__fadedup {
+  margin: 40px;
+  height: 35em;
+  background-image: linear-gradient(180deg, transparent, rgb(3, 3, 3), #000);
 }

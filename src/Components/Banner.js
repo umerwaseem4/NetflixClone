@@ -17,27 +17,31 @@ function Banner() {
   }, []);
   console.log(movie);
   return (
-    <header
-      className="banner"
-      style={{
-        backgroundSize: "cover",
-        backgroundImage: `url(
+    <React.Fragment>
+      <header
+        className="banner"
+        style={{
+          backgroundSize: "cover",
+          backgroundImage: `url(
             "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
         )`,
-        backgroundPosition: "center center",
-      }}
-    >
-      <div className="banner__content">
-        <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
-        {/* Buttons */}
-        <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
+          backgroundPosition: "center center",
+        }}
+      >
+        <div className="banner__content">
+          <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+          {/* Buttons */}
+          <div className="banner__buttons">
+            <button className="banner__button">Play</button>
+            <button className="banner__button">My List</button>
+          </div>
+          <h4 className="banner__date">Realese Date: {movie.first_air_date}</h4>
+          {/* description */}
+          <h2 className="banner__desc">{movie?.overview}</h2>
         </div>
-        {/* description */}
-        <h1 className="banner__desc">{movie?.overview}</h1>
-      </div>
-    </header>
+        <div className="banner__faded"></div>
+      </header>
+    </React.Fragment>
   );
 }
 
