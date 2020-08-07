@@ -3,14 +3,14 @@
 @import "./styles/Accordion.scss";
 @import "./styles/Footer";
 @import "./styles/Row";
+@import "./styles/spinner.scss";
+@import "./styles/Banner";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @media only screen and (max-width: 750px) {

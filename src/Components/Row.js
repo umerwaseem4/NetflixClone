@@ -2,10 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "../axios";
+import Loader from "./spinner";
 
 const base_URL = "https://image.tmdb.org/t/p/original/";
 
-const Row = ({ title, fetchUrl }) => {
+const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setmovies] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -17,21 +18,24 @@ const Row = ({ title, fetchUrl }) => {
   }, [fetchUrl]);
 
   return (
-    <div className="row">
-      <h1>{title}</h1>
-      <div className="row__posters">
-        {movies.map((movie) => {
-          return (
-            <img
-              key={movie.id}
-              className="row__poster"
-              src={`${base_URL}${movie.poster_path}`}
-              alt={movie.name}
-            />
-          );
-        })}
+    <React.Fragment>
+      <div className="row">
+        <h1>{title}</h1>
+        <div className="row__posters">
+          {movies.map((movie) => {
+            return (
+              <img
+                className={`row__poster ${isLargeRow && "row__largePoster"}`}
+                src={`${base_URL}${
+                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
+                alt={movie.name}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
